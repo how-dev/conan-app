@@ -11,9 +11,9 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import { red } from '@material-ui/core/colors';
 import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -43,12 +43,15 @@ const useStyles = makeStyles((theme: Theme) =>
 
 interface Props {
     title: string;
-    cover: string;
     year: number;
+    cover: string;
+    persons: Array<{ name: string; id: number;}>;
     description: string;
+    totalPages: number;
+    coverPrice: string;
 }
 
-export const CompleteCard: React.FC<Props> = ({ title, cover, year, description }) => {
+export const CompleteCard: React.FC<Props> = ({ coverPrice, totalPages, persons, title, cover, year, description }) => {
     const classes = useStyles();
     const [expanded, setExpanded] = React.useState(false);
 
@@ -72,12 +75,14 @@ export const CompleteCard: React.FC<Props> = ({ title, cover, year, description 
                 image={cover}
                 title={title}
             />
+            <CardContent>
+                {persons.map((person: {id: number, name: string}, index: number) => (
+                    <Typography key={index} variant="body2" color="textSecondary" component="p">{person.name}</Typography>
+                ))}
+            </CardContent>
             <CardActions disableSpacing>
                 <IconButton aria-label="add to favorites">
                     <FavoriteIcon />
-                </IconButton>
-                <IconButton aria-label="share">
-                    <ShareIcon />
                 </IconButton>
                 <IconButton
                     className={clsx(classes.expand, {
@@ -92,8 +97,9 @@ export const CompleteCard: React.FC<Props> = ({ title, cover, year, description 
             </CardActions>
             <Collapse in={expanded} timeout="auto" unmountOnExit>
                 <CardContent>
+                    <Typography paragraph>Páginas: {totalPages}</Typography>
                     <Typography paragraph>{description}</Typography>
-
+                    <Typography paragraph>Preço: {coverPrice}</Typography>
                 </CardContent>
             </Collapse>
         </Card>

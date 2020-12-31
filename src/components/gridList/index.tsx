@@ -1,9 +1,9 @@
 import React from 'react';
 import "./index.css"
-import { result, Conan } from "../images";
-import { CompleteCard } from "../components/card"
+import { result, Conan } from "../../images";
+import { CompleteCard } from "../card"
 
-const CoverList: () => JSX.Element =  function (): JSX.Element {
+const CoverList: React.FC = () => {
     return (
         <div className="coverBox">
             {result.map((data: Conan, index: number) => (
@@ -13,6 +13,9 @@ const CoverList: () => JSX.Element =  function (): JSX.Element {
                     cover={data.cover}
                     description={data.description}
                     year={data.year}
+                    persons={data.persons}
+                    totalPages={data.totalPages}
+                    coverPrice={data.coverPrice}
                 />
             ))}
         </div>

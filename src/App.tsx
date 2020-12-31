@@ -1,10 +1,12 @@
 import React from "react";
-import CoverList from "./gridList";
+import CoverList from "./components/gridList";
+import { Title } from "./components/title/"
+import "./App.css"
 
 const App: React.FC = () => {
   return (
     <div>
-        <h1 style={{textAlign: "center",}}>Capas</h1>
+        <Title />
         <CoverList />
     </div>
   );
