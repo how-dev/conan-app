@@ -16,6 +16,7 @@ const CoverList: React.FC = () => {
                     persons={data.persons}
                     totalPages={data.totalPages}
                     coverPrice={data.coverPrice}
+                    company={data.company}
                 />
             ))}
         </div>

@@ -1,4 +1,5 @@
 export interface Conan {
+    ref: number
     title: string;
     company: string;
     history: Array<{ name: string; id: number; }>;
@@ -19,6 +20,7 @@ export interface Conan {
 export let result: Conan[];
 result = [
     {
+        ref: 1,
         title: `O habitante das trevas`,
         company: `Minami & Cunha (M & C)`,
         history: [],
@@ -52,6 +54,7 @@ result = [
         Numa cidade na fronteira de Zamora, Conan conquista o amor da rainha local. Logo, porém, a paixão se transforma em ódio e o Bárbaro descobre o horror que se esconde por baixo das paredes do palácio real. Existem três versões desta HQ: a com a nudez feminina censurada (Conan the Barbarian, n° 12), a com a nudez sem censura (Savage Tales, n° 2) e com a nudez semicensurada (Savage Sword, TPB n° 12).`,
     },
     {
+        ref: 2,
         title: `Teia do Deus-Aranha!`,
         company: `Minami & Cunha (M & C)`,
         history: [],
@@ -88,6 +91,7 @@ result = [
         Perdido no deserto, Conan chega à lendária Yezud. No entanto, em vez de uma acolhida amigável, o herói é levado para ser sacrificado a uma monstruosa divindade.`,
     },
     {
+        ref: 3,
         title: `Guardiães da cripta`,
         company: `Minami & Cunha (M & C)`,
         history: [
@@ -121,4 +125,45 @@ result = [
         Titulo original "The Keepers of the Crypt!"
         Enquanto Conan está sendo rastreado por soldados coríntios a pedido de Nemedia. Em uma cidade abandonada da Corinthia, ele encontra uma cidade abandonada, guardada por um monstro gigante de gila. Ele começa a bisbilhotar a cidade, mas fica surpreso com o reaparecimento de Burgun, aliando-se encontram um tesouro fenomenal... ferrenhamente protegido por um grupo de tenebrosos guardiões ancestrais.`,
     },
+    {
+        ref: 4,
+        title: `Espada Selvagem de Conan, A n° 1`,
+        company: `Abril`,
+        history: [
+            {name: "Robert E. Howard", id: 1,}
+        ],
+        totalPages: 84,
+        year: 1984,
+        licensor: `Marvel Comics`,
+        status: `Título encerrado`,
+        coverPrice: `Cr$ 700,00`,
+        cover: `https://image.isu.pub/180502031150-3e9a40ab1966efdaba991e4fd1cd20b2/jpg/page_1_thumb_large.jpg`,
+        persons: [
+            {name: `Conan, O Bárbaro`, id: 1,},
+            {name: `Amalric (Malthom)`, id: 2,},
+            {name: `Zuleika`, id: 3,},
+            {name: `Khelru-Shan`, id: 4,},
+            {name: `Mordek, O Amaldiçoado`, id: 5,},
+            {name: `Aballah Bin Khor`, id: 6,},
+            {name: `Ali-Bey`, id: 7,},
+            {name: `Hari Bin Nasru`, id: 8,},
+        ],
+        screenwriters: [
+            {name: `Roy Thomas`, id: 1,},
+        ],
+        artists: [
+            {name: `John Buscema`, id: 1,},
+        ],
+        finalArt: [
+            {name: `Alfredo Alcala`, id: 1,},
+        ],
+        originalPublisher: [
+            {name: `Stan Lee`, id: 1,},
+        ],
+        description: `Publicada originalmente em Savage Sword of Conan, The (1974) n° 12/1976 - Marvel Comics
+        Titulo original "The Haunters Of Castle Crimson". Adaptação de "The Slave Princess" de Howard.
+        Diviso: Os Espectros do Castelo Rubro/A Herança do Terror/Barganha Entre Demônios/ O Teste de Zuleika/Choque Entre Ladrões/O Inimigo Interior/ Espadas e Espectros/Noite Vermelha.
+        A escrava chamada Zuleika cruza o caminho com Conan, salvado-a, aliando-se a um amigo mercenário e elabora um plano ousado para extorquir um nobre. Porém havia uma terrível maldição oculta sob o sinistro Castelo Rubro.`,
+    },
 ];
+

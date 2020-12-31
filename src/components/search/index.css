@@ -1,0 +1,17 @@
+.searchBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+    .sword {
+        width: 100%;
+        transform: scaleX(-1);
+    }
+    .search {
+        background: transparent;
+        border: 0;
+        outline: none;
+        position: absolute;
+        z-index: 1;
+    }

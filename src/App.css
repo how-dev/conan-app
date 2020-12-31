@@ -1,4 +1,11 @@
 #root span {
   font-family: 'Redressed', cursive;
 }
+#root {
+  background-image: url(background.png);
+  background-attachment: fixed;
+}
+#root * {
+  color: white;
+}
 

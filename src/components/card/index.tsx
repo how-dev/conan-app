@@ -18,12 +18,16 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
-            marginBottom: 20,
+            marginBottom: 40,
             width: "80%",
+            boxShadow: "4px 0 10px #7a3700",
+            background: "radial-gradient(#7a3700 50%, black)",
+            color: "white",
+            borderRadius: 15,
         },
         media: {
             height: 300,
-            paddingTop: '56.25%', // 16:9
+            paddingTop: '56.25%',
         },
         expand: {
             transform: 'rotate(0deg)',
@@ -49,9 +53,10 @@ interface Props {
     description: string;
     totalPages: number;
     coverPrice: string;
+    company: string;
 }
 
-export const CompleteCard: React.FC<Props> = ({ coverPrice, totalPages, persons, title, cover, year, description }) => {
+export const CompleteCard: React.FC<Props> = ({ company, coverPrice, totalPages, persons, title, cover, year, description }) => {
     const classes = useStyles();
     const [expanded, setExpanded] = React.useState(false);
 
@@ -76,9 +81,7 @@ export const CompleteCard: React.FC<Props> = ({ coverPrice, totalPages, persons,
                 title={title}
             />
             <CardContent>
-                {persons.map((person: {id: number, name: string}, index: number) => (
-                    <Typography key={index} variant="body2" color="textSecondary" component="p">{person.name}</Typography>
-                ))}
+                <Typography variant="body2" color="textSecondary" component="p">Editora: {company}</Typography>
             </CardContent>
             <CardActions disableSpacing>
                 <IconButton aria-label="add to favorites">
@@ -100,6 +103,12 @@ export const CompleteCard: React.FC<Props> = ({ coverPrice, totalPages, persons,
                     <Typography paragraph>Páginas: {totalPages}</Typography>
                     <Typography paragraph>{description}</Typography>
                     <Typography paragraph>Preço: {coverPrice}</Typography>
+
+                    Principais Personagens:
+
+                    {persons.map((person: {id: number, name: string}, index: number) => (
+                        <Typography key={index} variant="body2" component="li">{person.name}</Typography>
+                    ))}
                 </CardContent>
             </Collapse>
         </Card>
