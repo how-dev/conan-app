@@ -18,7 +18,7 @@ const App: React.FC = () => {
                 <Search />
                 <CoverList />
             </Route>
-            <Route path="/cover/:ref">
+            <Route path="/cover/:id">
                 <CoverPage />
             </Route>
         </Switch>
