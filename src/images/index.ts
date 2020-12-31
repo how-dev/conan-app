@@ -29,7 +29,7 @@ result = [
         licensor: `Marvel Comics`,
         status: `Título encerrado`,
         coverPrice: `Cr$ 1,50`,
-        cover: `https://lh3.googleusercontent.com/proxy/e288cre04hSTsrpZRDjxV7jUNiUQMexLE743DG65IG81Xl7xVVs_0xXVU7gpJRZ1Bn1cON85Wf7mZmyseooUZ371iI3B-oAGIJ-oj7nBxs9TxNhPnp5_7ySDcstWMIe7dsaC3OnyFo1E0FlrGZr_6269`,
+        cover: `https://1.bp.blogspot.com/-HW4RU8MVGqA/X3C_cU5wIMI/AAAAAAACFgc/0y9pjyMUj7MTvbe3LcfvoO7Geg0OkcdLQCLcBGAsYHQ/s809/Marvel80AnosC01.jpg`,
         persons: [
             {name: `Conan, O Bárbaro`, id: 1,},
             {name: `Yulek`, id: 2,},
@@ -92,7 +92,7 @@ result = [
     },
     {
         id: 3,
-        title: `Guardiães da cripta`,
+        title: `Guardiões da cripta`,
         company: `Minami & Cunha (M & C)`,
         history: [
             {name: "Robert E. Howard", id: 1,}
@@ -102,7 +102,7 @@ result = [
         licensor: `Marvel Comics`,
         status: `Título encerrado`,
         coverPrice: `Cr$ 1,50`,
-        cover: `https://lh3.googleusercontent.com/proxy/2d5Am9AGUH4cPAl9bJeCFl4fcb5lce59HiGTqS57gOL0TTjXh_5fcaHYFB8UiA1fDL5eMSIzmMIgCYYWgLpyFuFA5Z7KXYyxP6A-HvcDz6jR4qMHem6QtSSvsimE1t5M21_vy1xu1xQNlSZACqHnzmQE`,
+        cover: `https://www.guiadosquadrinhos.com/edicao/ShowImage.aspx?id=41099&path=minami/co16010003.jpg`,
         persons: [
             {name: `Conan, O Bárbaro`, id: 1,},
             {name: `Burgun`, id: 2,},
