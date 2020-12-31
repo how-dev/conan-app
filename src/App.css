@@ -4,6 +4,8 @@
 #root {
   background-image: url(background.png);
   background-attachment: fixed;
+  background-size: 100%;
+  overflow: hidden;
 }
 #root * {
   color: white;
