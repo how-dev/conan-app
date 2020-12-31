@@ -1,3 +1,8 @@
+import ref1 from "./covers/ref1.jpg"
+import ref2 from "./covers/ref2.jpg"
+import ref3 from "./covers/ref3.jpeg"
+import ref4 from "./covers/ref4.jpg"
+
 export interface Conan {
     id: number;
     title: string;
@@ -29,7 +34,7 @@ result = [
         licensor: `Marvel Comics`,
         status: `Título encerrado`,
         coverPrice: `Cr$ 1,50`,
-        cover: `https://1.bp.blogspot.com/-HW4RU8MVGqA/X3C_cU5wIMI/AAAAAAACFgc/0y9pjyMUj7MTvbe3LcfvoO7Geg0OkcdLQCLcBGAsYHQ/s809/Marvel80AnosC01.jpg`,
+        cover: ref1,
         persons: [
             {name: `Conan, O Bárbaro`, id: 1,},
             {name: `Yulek`, id: 2,},
@@ -63,7 +68,7 @@ result = [
         licensor: `Marvel Comics`,
         status: `Título encerrado`,
         coverPrice: `Cr$ 1,50`,
-        cover: `https://1.bp.blogspot.com/-4L0mQTBZ-OM/V4AFmjsjfII/AAAAAAAAGDw/oDtoTffPSqcfPCq6Afugwlbc-A-rruljwCLcB/s1600/ShowImage%2B%25281%2529.jpg`,
+        cover: ref2,
         persons: [
             {name: `Conan, O Bárbaro`, id: 1,},
             {name: `Sarkon`, id: 2,},
@@ -102,7 +107,7 @@ result = [
         licensor: `Marvel Comics`,
         status: `Título encerrado`,
         coverPrice: `Cr$ 1,50`,
-        cover: `https://www.guiadosquadrinhos.com/edicao/ShowImage.aspx?id=41099&path=minami/co16010003.jpg`,
+        cover: ref3,
         persons: [
             {name: `Conan, O Bárbaro`, id: 1,},
             {name: `Burgun`, id: 2,},
@@ -137,7 +142,7 @@ result = [
         licensor: `Marvel Comics`,
         status: `Título encerrado`,
         coverPrice: `Cr$ 700,00`,
-        cover: `https://image.isu.pub/180502031150-3e9a40ab1966efdaba991e4fd1cd20b2/jpg/page_1_thumb_large.jpg`,
+        cover: ref4,
         persons: [
             {name: `Conan, O Bárbaro`, id: 1,},
             {name: `Amalric (Malthom)`, id: 2,},

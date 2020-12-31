@@ -13,7 +13,7 @@ export const CoverPage: React.FC = () => {
         <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
             <Button onClick={() => history.push("/")} style={{color: "darkred"}}>voltar</Button>
             <span style={{ margin: 10, padding: 20, fontSize: 30, color: "black", background: "radial-gradient(white, transparent)"}}>{theCover.title}</span>
-            <img alt={theCover.title} src={theCover.cover} />
+            <img alt={theCover.title} src={theCover.cover} style={{width: "80%"}}/>
             <div className="completeDatas">
                 <span style={{ fontSize: 30, color: "black"}}>Dados: </span>
                 <div style={{color: "black", fontWeight: 700, display: "flex"}}><div style={{color: "darkred", fontWeight: 700}}>Número de páginas:</div> {theCover.totalPages}</div>
