@@ -1,5 +1,5 @@
 export interface Conan {
-    ref: number
+    id: number;
     title: string;
     company: string;
     history: Array<{ name: string; id: number; }>;
@@ -20,7 +20,7 @@ export interface Conan {
 export let result: Conan[];
 result = [
     {
-        ref: 1,
+        id: 1,
         title: `O habitante das trevas`,
         company: `Minami & Cunha (M & C)`,
         history: [],
@@ -54,7 +54,7 @@ result = [
         Numa cidade na fronteira de Zamora, Conan conquista o amor da rainha local. Logo, porém, a paixão se transforma em ódio e o Bárbaro descobre o horror que se esconde por baixo das paredes do palácio real. Existem três versões desta HQ: a com a nudez feminina censurada (Conan the Barbarian, n° 12), a com a nudez sem censura (Savage Tales, n° 2) e com a nudez semicensurada (Savage Sword, TPB n° 12).`,
     },
     {
-        ref: 2,
+        id: 2,
         title: `Teia do Deus-Aranha!`,
         company: `Minami & Cunha (M & C)`,
         history: [],
@@ -91,7 +91,7 @@ result = [
         Perdido no deserto, Conan chega à lendária Yezud. No entanto, em vez de uma acolhida amigável, o herói é levado para ser sacrificado a uma monstruosa divindade.`,
     },
     {
-        ref: 3,
+        id: 3,
         title: `Guardiães da cripta`,
         company: `Minami & Cunha (M & C)`,
         history: [
@@ -126,7 +126,7 @@ result = [
         Enquanto Conan está sendo rastreado por soldados coríntios a pedido de Nemedia. Em uma cidade abandonada da Corinthia, ele encontra uma cidade abandonada, guardada por um monstro gigante de gila. Ele começa a bisbilhotar a cidade, mas fica surpreso com o reaparecimento de Burgun, aliando-se encontram um tesouro fenomenal... ferrenhamente protegido por um grupo de tenebrosos guardiões ancestrais.`,
     },
     {
-        ref: 4,
+        id: 4,
         title: `Espada Selvagem de Conan, A n° 1`,
         company: `Abril`,
         history: [

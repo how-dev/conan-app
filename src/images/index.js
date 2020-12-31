@@ -2,7 +2,7 @@ exports.__esModule = true;
 exports.result = void 0;
 exports.result = [
     {
-        ref: 1,
+        id: 1,
         title: "O habitante das trevas",
         company: "Minami & Cunha (M & C)",
         history: [],
@@ -34,7 +34,7 @@ exports.result = [
         description: "Publicada originalmente em Conan The Barbarian (1970) n\u00B0 12/1971 - Marvel Comics\n        T\u00EDtulo original \"The Dweller in the Dark.\"\n        Numa cidade na fronteira de Zamora, Conan conquista o amor da rainha local. Logo, por\u00E9m, a paix\u00E3o se transforma em \u00F3dio e o B\u00E1rbaro descobre o horror que se esconde por baixo das paredes do pal\u00E1cio real. Existem tr\u00EAs vers\u00F5es desta HQ: a com a nudez feminina censurada (Conan the Barbarian, n\u00B0 12), a com a nudez sem censura (Savage Tales, n\u00B0 2) e com a nudez semicensurada (Savage Sword, TPB n\u00B0 12)."
     },
     {
-        ref: 2,
+        id: 2,
         title: "Teia do Deus-Aranha!",
         company: "Minami & Cunha (M & C)",
         history: [],
@@ -69,7 +69,7 @@ exports.result = [
         description: "Publicada originalmente em Conan The Barbarian (1970) n\u00B0 13/1972 - Marvel Comics\n        Titulo original \"Web of the Spider God!\"\n        Perdido no deserto, Conan chega \u00E0 lend\u00E1ria Yezud. No entanto, em vez de uma acolhida amig\u00E1vel, o her\u00F3i \u00E9 levado para ser sacrificado a uma monstruosa divindade."
     },
     {
-        ref: 3,
+        id: 3,
         title: "Guardi\u00E3es da cripta",
         company: "Minami & Cunha (M & C)",
         history: [
@@ -102,7 +102,7 @@ exports.result = [
         description: "Publicada originalmente em Conan The Barbarian (1970) n\u00B0 8/1971 - Marvel Comics\n        Titulo original \"The Keepers of the Crypt!\"\n        Enquanto Conan est\u00E1 sendo rastreado por soldados cor\u00EDntios a pedido de Nemedia. Em uma cidade abandonada da Corinthia, ele encontra uma cidade abandonada, guardada por um monstro gigante de gila. Ele come\u00E7a a bisbilhotar a cidade, mas fica surpreso com o reaparecimento de Burgun, aliando-se encontram um tesouro fenomenal... ferrenhamente protegido por um grupo de tenebrosos guardi\u00F5es ancestrais."
     },
     {
-        ref: 4,
+        id: 4,
         title: "Espada Selvagem de Conan, A n\u00B0 1",
         company: "Abril",
         history: [

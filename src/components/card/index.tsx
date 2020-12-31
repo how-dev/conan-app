@@ -10,10 +10,10 @@ import Collapse from '@material-ui/core/Collapse';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import { red } from '@material-ui/core/colors';
-import FavoriteIcon from '@material-ui/icons/Favorite';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
-
+import AddCircleIcon from '@material-ui/icons/AddCircle';
+import FormatIndentIncreaseIcon from '@material-ui/icons/FormatIndentIncrease';
+import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -54,11 +54,13 @@ interface Props {
     totalPages: number;
     coverPrice: string;
     company: string;
+    id: number;
 }
 
-export const CompleteCard: React.FC<Props> = ({ company, coverPrice, totalPages, persons, title, cover, year, description }) => {
+export const CompleteCard: React.FC<Props> = ({ id, company, coverPrice, totalPages, persons, title, cover, year, description }) => {
     const classes = useStyles();
     const [expanded, setExpanded] = React.useState(false);
+    const history = useHistory();
 
     const handleExpandClick = () => {
         setExpanded(!expanded);
@@ -68,8 +70,8 @@ export const CompleteCard: React.FC<Props> = ({ company, coverPrice, totalPages,
         <Card className={classes.root}>
             <CardHeader
                 action={
-                    <IconButton aria-label="settings">
-                        <MoreVertIcon />
+                    <IconButton aria-label="settings" onClick={() => history.push(`/cover/${id}`)}>
+                        <FormatIndentIncreaseIcon />
                     </IconButton>
                 }
                 title={title}
@@ -85,7 +87,7 @@ export const CompleteCard: React.FC<Props> = ({ company, coverPrice, totalPages,
             </CardContent>
             <CardActions disableSpacing>
                 <IconButton aria-label="add to favorites">
-                    <FavoriteIcon />
+                    <AddCircleIcon />
                 </IconButton>
                 <IconButton
                     className={clsx(classes.expand, {
