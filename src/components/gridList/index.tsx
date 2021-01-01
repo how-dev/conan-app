@@ -6,7 +6,6 @@ import { useSelector } from "react-redux";
 
 const CoverList: React.FC = () => {
     const searchInput = useSelector((state: { searching: string }) => state.searching)
-    console.log(result)
     return (
         <div className="coverBox">
             {searchInput ? result.filter(cover => cover.title?.toLowerCase().includes(searchInput) || String(cover.year)?.includes(searchInput)).map((data: Conan, index: number) => (

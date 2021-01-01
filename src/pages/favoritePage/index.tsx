@@ -8,15 +8,15 @@ import "./index.css";
 
 export const FavoritePage: React.FC = () => {
     const history = useHistory();
-    let FavList: Conan[] = useSelector((state: { searching: string; fav: [] }) => state.fav);
-    console.log(FavList);
+    const FavList: Conan[] = useSelector((state: { searching: string; fav: [] }) => state.fav);
 
     return (
         <div className="favBox">
             <Button onClick={() => history.push("/")} style={{color: "darkred"}}>voltar</Button>
             <span style={{fontSize: 40, margin: 10, textShadow: "2px 2px 5px black"}}>Favoritos: </span>
-            {FavList.length > 0 ? FavList.map((data: Conan) => (
+            {FavList.length > 0 ? FavList.map((data: Conan, index: number) => (
                 <CompleteCard
+                    key={index}
                     title={data.title}
                     cover={data.cover}
                     description={data.description}
