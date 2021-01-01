@@ -12,7 +12,7 @@ export const FavoritePage: React.FC = () => {
 
     return (
         <div className="favBox">
-            <Button onClick={() => history.push("/")} style={{color: "darkred"}}>voltar</Button>
+            <Button onClick={() => history.push("/")} variant="contained" color="primary">voltar</Button>
             <span style={{fontSize: 40, margin: 10, textShadow: "2px 2px 5px black"}}>Favoritos: </span>
             {FavList.length > 0 ? FavList.map((data: Conan, index: number) => (
                 <CompleteCard
@@ -26,6 +26,7 @@ export const FavoritePage: React.FC = () => {
                     coverPrice={data.coverPrice}
                     company={data.company}
                     id={data.id}
+                    isFavorite={true}
                 />
             )) : (
                 <span style={{fontSize: 40, margin: 10, color: "darkorange", textShadow: "2px 2px 5px black"}}>Não há nada aqui.</span>

@@ -5,6 +5,7 @@
     justify-content: center;
 }
     .sword {
+        max-width: 414px;
         width: 100%;
         transform: scaleX(-1);
     }

@@ -4,8 +4,9 @@
     align-items: center;
     position: fixed;
     right: 0;
-    background: radial-gradient(white, transparent 60%);
+    background: radial-gradient(lightskyblue, transparent 60%);
     border-radius: 50%;
+    z-index: 1;
 }
     .theBag {
         width: 80px;

@@ -18,13 +18,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { AddFavThunk } from "../../store/modules/favoriteCover/thunk";
 import { Conan } from "../../images";
 
+
+
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
             marginBottom: 40,
+            maxWidth: 330,
             width: "80%",
-            boxShadow: "4px 0 10px #7a3700",
-            background: "radial-gradient(#7a3700 50%, black)",
             color: "white",
             borderRadius: 15,
         },
@@ -58,14 +59,18 @@ interface Props {
     coverPrice: string;
     company: string;
     id: number;
+    isFavorite?: boolean;
 }
 
-export const CompleteCard: React.FC<Props> = ({ id, company, coverPrice, totalPages, persons, title, cover, year, description }) => {
+export const CompleteCard: React.FC<Props> = ({ id, company, coverPrice, totalPages, persons, title, cover, year, description , isFavorite}) => {
     const classes = useStyles();
     const [expanded, setExpanded] = React.useState(false);
     const history = useHistory();
     const dispatch = useDispatch();
-
+    let FavCover: { background: string } = { background: "radial-gradient(skyblue, black)"};
+    if (isFavorite) {
+        FavCover = { background: "radial-gradient(darkred, black)" }
+    }
     const FavList: number[] = useSelector((state: {searching: string, fav: []}) => state.fav).map((elt: Conan) => elt.id)
     const condition = FavList.includes(id)
     const handleExpandClick = () => {
@@ -73,7 +78,7 @@ export const CompleteCard: React.FC<Props> = ({ id, company, coverPrice, totalPa
     };
 
     return (
-        <Card className={classes.root}>
+        <Card className={classes.root} style={FavCover}>
             <CardHeader
                 action={
                     <IconButton aria-label="settings" onClick={() => history.push(`/cover/${id}`)}>
