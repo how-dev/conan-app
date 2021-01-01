@@ -21,6 +21,8 @@ const App: React.FC = () => {
             <Route path="/cover/:id">
                 <CoverPage />
             </Route>
+            <Route path="/favoritelist">
+            </Route>
         </Switch>
     </div>
   );

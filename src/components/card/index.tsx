@@ -14,6 +14,8 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import AddCircleIcon from '@material-ui/icons/AddCircle';
 import FormatIndentIncreaseIcon from '@material-ui/icons/FormatIndentIncrease';
 import { useHistory } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { AddFavThunk } from "../../store/modules/favoriteCover/thunk";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -61,6 +63,12 @@ export const CompleteCard: React.FC<Props> = ({ id, company, coverPrice, totalPa
     const classes = useStyles();
     const [expanded, setExpanded] = React.useState(false);
     const history = useHistory();
+    const dispatch = useDispatch();
+
+    let teste = useSelector((state: {searching: string, fav: [][]}) => state.fav)
+    // ---------------------------------
+    console.log(teste)
+    // ---------------------------------
 
     const handleExpandClick = () => {
         setExpanded(!expanded);
@@ -86,7 +94,7 @@ export const CompleteCard: React.FC<Props> = ({ id, company, coverPrice, totalPa
                 <Typography variant="body2" color="textSecondary" component="p">Editora: {company}</Typography>
             </CardContent>
             <CardActions disableSpacing>
-                <IconButton aria-label="add to favorites">
+                <IconButton aria-label="add to favorites" onClick={() => dispatch(AddFavThunk([id, title, cover ]))}>
                     <AddCircleIcon />
                 </IconButton>
                 <IconButton
