@@ -1,1 +1,1 @@
-export const AddFav = (value: (string | number)[]) => ({ type: "@CONAN/addFav", value });
+export const AddFav = (value: { id: number; company: string; coverPrice: string; totalPages: number; persons: object[]; title: string; cover: string; year: number; description: string }) => ({ type: "@CONAN/addFav", value });

@@ -65,11 +65,8 @@ export const CompleteCard: React.FC<Props> = ({ id, company, coverPrice, totalPa
     const history = useHistory();
     const dispatch = useDispatch();
 
-    let teste = useSelector((state: {searching: string, fav: [][]}) => state.fav)
-    // ---------------------------------
+    const teste = useSelector((state: {searching: string, fav: object[]}) => state.fav)
     console.log(teste)
-    // ---------------------------------
-
     const handleExpandClick = () => {
         setExpanded(!expanded);
     };
@@ -94,7 +91,7 @@ export const CompleteCard: React.FC<Props> = ({ id, company, coverPrice, totalPa
                 <Typography variant="body2" color="textSecondary" component="p">Editora: {company}</Typography>
             </CardContent>
             <CardActions disableSpacing>
-                <IconButton aria-label="add to favorites" onClick={() => dispatch(AddFavThunk([id, title, cover ]))}>
+                <IconButton aria-label="add to favorites" onClick={() => dispatch(AddFavThunk({ id, company, coverPrice, totalPages, persons, title, cover, year, description }))}>
                     <AddCircleIcon />
                 </IconButton>
                 <IconButton

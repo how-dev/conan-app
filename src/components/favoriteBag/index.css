@@ -1,0 +1,22 @@
+.favBag {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    background: radial-gradient(white, transparent 60%);
+    border-radius: 50%;
+}
+    .theBag {
+        width: 80px;
+        height: 60px;
+        cursor: pointer;
+        transition: .5s;
+    }
+        .theBag:hover {
+            width: 90px;
+            height: 70px;
+        }
+        .subBag {
+
+        }
